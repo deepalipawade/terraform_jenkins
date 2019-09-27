@@ -23,7 +23,7 @@ pipeline{
                 } 		
 		stage('terraform plan') {
                         steps {
-                                sh 'terraform --version;terraform init -input=false;ls ./terraform_jenkins;cd ./terraform_jenkins;pwd;terraform init'
+                                sh 'sudo /root/terraform init ./terraform_jenkins'
                         }
                 }
                
