@@ -13,12 +13,12 @@ pipeline{
 		}
 		stage('git clone') {
 			steps {
-				sh 'sudo rm -r *;pwd;sudo git clone https://github.com/deepalipawade/terraform_jenkins.git'	
+				sh 'sudo rm -r *;sudo git clone https://github.com/deepalipawade/terraform_jenkins.git'	
 			}
 		}
 		stage('tfvars create') {
                         steps {
-                                sh 'cat /root/vars.tf'
+                                sh 'sudo cp /root/vars.tf ./terraform_jenkins'
                         }
                 }
                 
