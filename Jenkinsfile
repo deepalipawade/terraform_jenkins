@@ -16,5 +16,6 @@ pipeline{
 				sh 'pwd;sudo git clone https://github.com/deepalipawade/terraform_jenkins.git'	
 			}
 		}
+	}
 }
 
