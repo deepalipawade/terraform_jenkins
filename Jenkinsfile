@@ -16,6 +16,13 @@ pipeline{
 				sh 'pwd;sudo git clone https://github.com/deepalipawade/terraform_jenkins.git'	
 			}
 		}
+		stage('tfvars create') {
+                        steps {
+                                sh 'cat /root/vars.tf'
+                        }
+                }
+                
+
 	}
 }
 
