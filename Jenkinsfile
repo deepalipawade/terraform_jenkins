@@ -23,7 +23,7 @@ pipeline{
                 } 		
 		stage('terraform plan') {
                         steps {
-                                sh 'ls ./terraform_jenkins;cd ./terraform_jenkins;terraform init'
+                                sh 'ls ./terraform_jenkins;cd ./terraform_jenkins;pwd;terraform init'
                         }
                 }
                
