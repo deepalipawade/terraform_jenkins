@@ -21,11 +21,11 @@ pipeline{
                                 sh 'sudo cp /root/vars.tf ./terraform_jenkins/'
                         }
                 }
- 		 stage('terraform init') {
-                        steps {
-                                sh 'sudo /root/terraform init ./terraform_jenkins'
-                        }
-                }
+ 		 #stage('terraform init') {
+                  #      steps {
+                   #             sh 'sudo /var/lib/jenkins/workspace/terraform_pipeline/terraform_jenkins/ terraform init'
+                    #    }
+                #}
                 stage('terraform plan') {
                         steps {
                                 sh 'ls ./terraform_jenkins'
