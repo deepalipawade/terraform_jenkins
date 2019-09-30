@@ -23,7 +23,7 @@ pipeline{
                 } 		
 		stage('terraform plan') {
                         steps {
-                                sh 'sudo terraform --version'
+                                sh 'terraform --version'
                         }
                 }
                
