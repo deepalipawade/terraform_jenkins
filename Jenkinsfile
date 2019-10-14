@@ -23,7 +23,7 @@ pipeline{
                 } 		
 		stage('terraform plan') {
                         steps {
-                                sh 'ls'	
+                                sh 'ls;cd terraform_jenkins;ls'	
                         }
                 }
                
