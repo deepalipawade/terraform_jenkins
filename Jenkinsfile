@@ -23,7 +23,7 @@ pipeline{
                 } 		
 		stage('terraform plan') {
                         steps {
-                                sh 'terraform plan;terraform apply'	
+                                sh 'ls'	
                         }
                 }
                
