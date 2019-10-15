@@ -23,7 +23,7 @@ pipeline{
                 } 		
 		stage('terraform plan') {
                         steps {
-                                sh 'ls;cd terraform_jenkins;ls;terraform init;terraform plan -lock=false;terraform apply -lock=false'	
+                                sh 'ls;cd terraform_jenkins;ls;terraform init ./jenkins'	
                         }
                 }
                
