@@ -23,12 +23,12 @@ pipeline{
                 } 		
 		stage('terraform init') {
                         steps {
-                                sh 'ls ./terraform_jenkins;sudo terraform init ./terraform_jenkins'	
+                                sh 'ls ./terraform_jenkins;sudo terraform init -input=false'	
                         }
                 }
 		stage('terraform plan') {
                         steps {
-                                sh 'sudo terraform plan ./terraform_jenkins'	
+                                sh 'sudo terraform plan -out=tfplan -input=false'	
                         }
                 }
 		stage('terraform apply') {
