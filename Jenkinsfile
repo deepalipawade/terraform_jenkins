@@ -31,6 +31,11 @@ pipeline{
                                 sh 'sudo terraform plan ./terraform_jenkins'	
                         }
                 }
+		stage('terraform apply') {
+                        steps {
+                                sh 'sudo terraform plan ./terraform_jenkins'	
+                        }
+                }
                
 
 	}
