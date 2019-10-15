@@ -33,7 +33,7 @@ pipeline{
                 }
 		stage('terraform apply') {
                         steps {
-                                sh 'sudo terraform apply ./terraform_jenkins -input=false'	
+                                sh 'sudo terraform apply -input=false ./terraform_jenkins'	
                         }
                 }
                
