@@ -23,7 +23,7 @@ pipeline{
                 } 		
 		stage('terraform plan') {
                         steps {
-                                sh 'ls;cd terraform_jenkins;ls;sudo terraform init ./jenkins'	
+                                sh 'ls;cd terraform_jenkins;ls;sudo terraform init ./terraform_jenkins'	
                         }
                 }
                
