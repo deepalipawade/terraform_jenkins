@@ -23,17 +23,17 @@ pipeline{
                 } 		
 		stage('terraform init') {
                         steps {
-                                sh 'ls ./terraform_jenkins;sudo terraform init -input=false'	
+                                sh 'ls ./terraform_jenkins;sudo terraform init -input=false ./terraform_jenkins'	
                         }
                 }
 		stage('terraform plan') {
                         steps {
-                                sh 'sudo terraform plan -out=tfplan -input=false'	
+                                sh 'sudo terraform plan -out=tfplan -input=false ./terraform_jenkins'	
                         }
                 }
 		stage('terraform apply') {
                         steps {
-                                sh 'sudo terraform apply -input=false'	
+                                sh 'sudo terraform apply -input=false tfplan ./terraform_jenkins'	
                         }
                 }
                
